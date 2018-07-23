@@ -14,6 +14,8 @@ body {
     letter-spacing: 0.5px;
     font-size: 15px;
 	font-weight: 400;
+	overflow-x: hidden!important;
+	background-size: cover;
 }
 ol, ul {
 	list-style: none;
@@ -47,20 +49,50 @@ a:hover, a:focus, a:active{
 	font-size: 22px;
 	font-weight: 700;
 }
+
+/***********************************
+************************************
+Solutions div animation
+************************************
+***********************************/
+.animation-right {
+  margin-left: 40px;
+  animation: 1s ease-in-out 0s 1 slideInFromRight;
+
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: skew(0deg) translateX(100%);
+    opacity: 0;
+  }
+  60% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: skew(0deg) translateX(0);
+    opacity: 1;
+  }
+}
+
 /***********************************
 ************************************
 Responsive media queries
 ************************************
 ***********************************/
 .header {
-    background: url('../img/cysphereCanvas.jpg') no-repeat fixed;
+    background: url('../img/cysphereCanvas3.jpg') no-repeat fixed;
+		-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
-    min-height: 630px;
+		min-width: 100%;
+    min-height: 650px;
     position: relative;
 }
 .navbar-default {
     background-color: transparent;
-	border: 0px;
+	  border: 0px;
     padding: 20px 0;
     transition: all 0.3s;
 }
@@ -92,18 +124,17 @@ Responsive media queries
     background: rgba(50,60,70, 0.9);
 }
 
-.bg-color{
+/* .bg-color{
 	background-color: RGBA(0, 0, 0, 0.67);
 	min-height: 650px;
-}
-.navbar-border{
-}
+} */
+
 .banner-text{
 	border-left: 5px solid #BE2525;
 	padding: 15px 100px 15px 20px;
 	color: #fff;
-	margin-top: 170px;
-	margin-bottom: 80px;
+	margin-top: 250px;
+	margin-bottom: 60px;
 }
 .banner-text h2, .banner-text p{
 	font-size: 30px;
@@ -121,11 +152,11 @@ Responsive media queries
     position: absolute;
     bottom: -140px;
     font-size: 24px;
-    color: #fff;
+    color: #BE2525;
     width: 40px;
 	height: 40px;
-	border: 1px solid #fff;
-	line-height: 40px;
+	border: 3px solid #BE2525;
+	line-height: 35px;
 	border-radius: 50%;
 }
 .deco{
@@ -193,6 +224,7 @@ Responsive media queries
   color: white;
 	padding: 12px 10px;
 	display:block;
+	cursor: pointer;
 }
 .solution-sidebar li a:visited {
 	color: white;
@@ -200,6 +232,10 @@ Responsive media queries
 .solution-sidebar li a:hover, .solution-sidebar li .current {
 color: white;
 background-color: rgb(244, 80, 66);
+}
+
+.listing-display-prop {
+	display: none;
 }
 
 .grid-padding{
