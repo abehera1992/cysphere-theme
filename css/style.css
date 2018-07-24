@@ -1,6 +1,8 @@
 
 #navbar-logo-cysphere{
 	width: 100px;
+	position:relative;
+	bottom: 3px;
 }
 a.navbar-brand{
 	margin:0;
@@ -49,7 +51,16 @@ a:hover, a:focus, a:active{
 	font-size: 22px;
 	font-weight: 700;
 }
-
+/***********************************
+************************************
+Landing Page bg animation
+************************************
+***********************************/
+@keyframes breath {
+  0%   { background-size: 100% auto; }
+  50% { background-size: 105% auto; }
+	100% { background-size: 100% auto; }
+}
 /***********************************
 ************************************
 Solutions div animation
@@ -81,14 +92,14 @@ Responsive media queries
 ************************************
 ***********************************/
 .header {
-    background: url('../img/cysphereCanvas3.jpg') no-repeat fixed;
+    background: url('../img/cysphereCanvas4.jpg') no-repeat fixed;
 		-webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-		min-width: 100%;
     min-height: 650px;
     position: relative;
+		animation: breath 10s linear;
 }
 .navbar-default {
     background-color: transparent;
@@ -101,7 +112,7 @@ Responsive media queries
     font-family: 'Satisfy', cursive;
 }
 .navbar-default .navbar-brand, .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
-    color: #fff;
+    color: #BE2525;
     outline: none;
 }
 .navbar-default .navbar-nav > li > a{
@@ -115,7 +126,9 @@ Responsive media queries
     background-color: transparent;
 }
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
-    color: #BE2525;
+    color:#BE2525;
+		font-weight: 600;
+		font-size: 17px;
     background-color: transparent;
 }
 
@@ -131,14 +144,14 @@ Responsive media queries
 
 .banner-text{
 	border-left: 5px solid #BE2525;
-	padding: 15px 100px 15px 20px;
-	color: #fff;
-	margin-top: 250px;
-	margin-bottom: 60px;
+	padding: 15px 70px 15px 20px;
+	color: #1D2934;
+	margin-top: 180px;
+	margin-bottom: 100px;
 }
 .banner-text h2, .banner-text p{
 	font-size: 30px;
-	font-weight: 400;
+	font-weight: 600;
 	font-family: 'Questrial', sans-serif;
 }
 /*.banner-text h2 span{
@@ -289,6 +302,7 @@ blockquote {
 #contact {
 		padding-top: 30px;
     width: 100%;
+		min-height: 530px;
     background-color: RGBA(29,41,52,0.92);
 }
 
