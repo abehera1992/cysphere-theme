@@ -59,6 +59,19 @@ a:hover, a:focus, a:active{
 .no-padding{
 	padding:0;
 }
+/* Custom scroll-bar styling */
+
+::-webkit-scrollbar {
+	width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: linear-gradient(#1D2934, #BE2525);
+	border-radius: 6px;
+}
+
+
+
 /***********************************
 ************************************
 Landing Page bg animation
